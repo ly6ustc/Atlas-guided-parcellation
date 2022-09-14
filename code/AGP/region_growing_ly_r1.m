@@ -4,7 +4,7 @@ function labels=region_growing_ly_r1(seeds, similarity, neibors, mask,threshold,
 % neibors: the adjacent matrix, N*N matrix. If two vertices are neighbouring in space, the value is 1.
 % threshold: stop condition, defined the threshold of correlation for parcellation. If not, input []. 
 % E.g., the value 0.6 means that if the maximal correlation between vertices and the parcel less than 0.6, this parcel stop growing.  
-%% fullnum: stop condition, if the number of assigned vertices reaches "fullnum", iteration stop.
+% fullnum: stop condition, if the number of assigned vertices reaches "fullnum", iteration stop.
 
 % tic;
 
@@ -71,14 +71,14 @@ while num>emptynum && ~isempty(cluster)
             cluster=clustertemp;
     else
 
-%         tic;
+
         [~,indexf]=max(Vertex(:,1));
         index_cache=Vertex(indexf,2);
         labels(index_cache) = clustertemp(indexf);
-%         toc;
+
         
-%         tic;
-        %%updata the S
+
+        %%update the S
 
         g=neibors(index_cache,:);
 
@@ -87,9 +87,7 @@ while num>emptynum && ~isempty(cluster)
         for j=unique(g)'
             g(g==j)=find(cluster==j);
         end 
-%         toc;
-        
-%         tic;
+
 
         emptyindex=false(length(cluster),1);
         
@@ -145,9 +143,8 @@ while num>emptynum && ~isempty(cluster)
         end
         
         cluster=clustertemp;
-%         toc;
         
-        %updata end
+        %update end
         if isempty(Vertex)
             break;
         end
@@ -165,20 +162,10 @@ end
 
 fprintf('\nComplete!...\n');
 
-% toc;
-% labelf=zeros(length(medialwall),1);
-% labelf(~logical(medialwall))=labels;
-% 
-% cif=ciftiopen('/home/z/DataStorage/lyPython/PDAtlas/gradient2/Gradient_Individual/PPMI/Parcellation/Parcels_Merge/EtaPD_Z_gradient_mean0.1_mergeKNN.dlabel.nii');
-% cif.cdata(1:length(labelf))=labelf;
-% ciftisave(cif,'test_com.dlabel.nii');
-% 
-% 
-% save(gifti(labelf),'test_com.func.gii');
 
 end
 
-% toc;
+
 
 function [a,b]=defined_similar(m)
     a=mean(m,2); 
