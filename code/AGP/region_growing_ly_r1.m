@@ -1,6 +1,11 @@
 function labels=region_growing_ly_r1(seeds, similarity, neibors, mask,threshold, fullnum)
+% seeds: the seed vertices initialize the parcellation, N*1 vector, N is the number of vertices in left/right hemisphere of brain.
+% similarity: the correlation matrix, N*N matrix.
+% neibors: the adjacent matrix, N*N matrix. If two vertices are neighbouring in space, the value is 1.
+% threshold: stop condition, defined the threshold of correlation for parcellation. If not, input []. 
+% E.g., the value 0.6 means that if the maximal correlation between vertices and the parcel less than 0.6, this parcel stop growing.  
+%% fullnum: stop condition, if the number of assigned vertices reaches "fullnum", iteration stop.
 
-%距离最短
 % tic;
 
 if ~isempty(mask)
