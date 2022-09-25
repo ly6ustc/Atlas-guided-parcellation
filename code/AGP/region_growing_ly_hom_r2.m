@@ -1,4 +1,4 @@
-function labels=region_growing_ly_1_hom_r2(seeds, similarity, neibors,mask, threshold, fullnum)
+function labels=region_growing_ly_hom_r2.m(seeds, similarity, neibors,mask, threshold, fullnum)
 
 %距离最短
 
