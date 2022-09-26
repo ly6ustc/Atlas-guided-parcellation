@@ -24,9 +24,18 @@ The "Parcellation_main.m" is for functional connectivity files of preprocessed f
 
 
 ## Data
-A numpy file with 3 dimenssion, subject × voxle × feature. The feature should be connectivity profiles, etc. For instance, the sample files in Tag DECBP:
-* "eta_putamen_caudateFCPtrainhighpassleft.npy" (this is train dataset)
-* "eta_putamen_caudateFCPtesthighpassleft.npy" (this file is not necessary due to the unsupervised learning, you could copy train dataset with this name)
+This method can used for fMRI images or their fucntional connectivity.
+
+In current defalt setting:
+
+1) fMRI images
+
+Date should be in this directory structure: ./sample/Timecourse/xxx/rfMRI_REST1_LR_Atlas_MSMAll_hp2000_clean.dtseries.nii. You can revised this directory structure in "Parcellation_main_T.m", as follows:
+![image](https://user-images.githubusercontent.com/69618541/192277363-e7d23d02-f627-4cdf-bb22-ab58ff909fdd.png)
+
+![image](https://user-images.githubusercontent.com/69618541/192277313-180da223-f1c9-45b9-9ab3-067cb1a868b6.png)
+
+
 ## Parameters
 See comments in the codes, the parameters "n_voxels", "n_input", "n_features" should be consistent with your Data.<BR/>
 Network architecture: n_input>256>128>64>n_features<BR/>
