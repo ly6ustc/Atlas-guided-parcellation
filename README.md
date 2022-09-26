@@ -53,7 +53,7 @@ In "Parcellation_main_T.m" or "Parcellation_main.m"
 
 ![image](https://user-images.githubusercontent.com/69618541/192279296-90281d32-ded7-42f9-bcc3-9b4da5b0c2b6.png)
 
-Set the output directory of results.
+set the output directory of results.
 
 
 ![image](https://user-images.githubusercontent.com/69618541/192279064-53855ea1-2489-440f-a4fd-2338bbd5db6b.png)
@@ -62,10 +62,10 @@ Set the output directory of results.
 
 Atlats = {'Shen.32k.dlabel.nii','Gordon333.32k_fs_LR.dlabel.nii'}  includes the full names of prior atlases files you want to use;
 
-Atlatsout={'Shen200','Gordon333'}  includes the corresponding the output sub-directory names. For instance, if you use the "Shen.32k.dlabel.nii", the results will generated in '../sample/Results/AGP/sub-xxx/Shen200/'
+Atlatsout={'Shen200','Gordon333'}  includes the corresponding the output sub-directory names. For instance, if you use the "Shen.32k.dlabel.nii", the results will generated in '../sample/Results/AGP/sub-xxx/Shen200/'.
 
 ## Results
-"./sample/Results/AGP/sub-xxx/atlas-xxx/FC_REST1.dlabel.nii"
+Such as "./sample/Results/AGP/sub-xxx/atlas-xxx/FC_REST1.dlabel.nii".
 
 You can revised the ouput file name in "Parcellation_main_T.m" or "Parcellation_main.m", follow as:
 
