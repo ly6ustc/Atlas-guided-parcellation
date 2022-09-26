@@ -30,11 +30,21 @@ In current defalt setting:
 
 1) fMRI images
 
-Date should be in this directory structure: ./sample/Timecourse/xxx/rfMRI_REST1_LR_Atlas_MSMAll_hp2000_clean.dtseries.nii. You can revised this directory structure in "Parcellation_main_T.m", as follows:
+  Date should be in this directory structure: ./sample/Timecourse/sub-xxx/rfMRI_REST1_LR_Atlas_MSMAll_hp2000_clean.dtseries.nii. You can revised this directory         structure in "Parcellation_main_T.m", as follows:
+
 ![image](https://user-images.githubusercontent.com/69618541/192277363-e7d23d02-f627-4cdf-bb22-ab58ff909fdd.png)
 
-![image](https://user-images.githubusercontent.com/69618541/192277313-180da223-f1c9-45b9-9ab3-067cb1a868b6.png)
+![image](https://user-images.githubusercontent.com/69618541/192277498-f6b2cd45-a365-4af7-98a8-0b7391eb7c88.png)
 
+2) functional connectivity
+
+  Left date should be in this directory structure: ./sample/Connectivity/sub-xxx/FC_left_REST1.npy, and right dataYou can revised this directory structure in this       directory structure: ./sample/Connectivity/sub-xxx/FC_right_REST1.npy. You can revised this directory structure in "Parcellation_main.m", as follows:
+
+![image](https://user-images.githubusercontent.com/69618541/192278231-ac29b8ca-c2a1-4c8c-b40a-01fdc00afa61.png)
+
+![image](https://user-images.githubusercontent.com/69618541/192278283-5811e32d-0588-4aac-a581-fff1c3662ba2.png)
+
+![image](https://user-images.githubusercontent.com/69618541/192278311-48cf0479-f2dd-4d73-b50a-f92da5b86308.png)
 
 ## Parameters
 See comments in the codes, the parameters "n_voxels", "n_input", "n_features" should be consistent with your Data.<BR/>
