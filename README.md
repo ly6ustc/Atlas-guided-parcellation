@@ -1,15 +1,17 @@
 # Atlas-guided-parcellation(AGP)
 A functionally-homogenous individual parcellation based on prior atlas 
 
-Using AGP for individualizes cortical parcellation, see [Atlas-guided parcellation: Individualized functionally-homogenous parcellation in cerebral cortex](https://www.sciencedirect.com/science/article/pii/S0010482522007867) for more details.
+Using AGP for individualized cortical parcellation, see [Atlas-guided parcellation: Individualized functionally-homogenous parcellation in cerebral cortex](https://www.sciencedirect.com/science/article/pii/S0010482522007867) for more details.
 
 # Introduction
 
-Using Deep Embedded Connectivity-Based Parcellation for striatal subdivisions
+Using AGP for individualized cortical parcellation
 
-In FCP50Subjects dir, showing parcellations with 3, 6, 7 and 8 parcel numbers. These results are obtained by DECBP framwork and FCP datasets, resampled to 2mm resolution as well.
+In ./Atlas dir, showes classical 7 atlases to guided the individual parcellations, you can add the new prior atlases here, by yourself.
 
-In XW50Subjects dir, similar results are obtained by DECBP framwork and XW datasets(including 23 PD subjects and 27 HC controls).
+In ./code dir, includes the AGP codes and its dependency package.
+
+In ./sample dir, provide a examplar of HCP including the rs-fMRI images(functional connectivity) and parcellation results.
 
 # How to run
 python DECBP.py
