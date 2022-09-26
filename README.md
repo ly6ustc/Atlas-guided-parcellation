@@ -16,7 +16,11 @@ In ./sample dir, provide a examplar of HCP including the rs-fMRI images(function
 # How to run
 Download the entire "Atlas-guided-parcellation" directory into your PC, and download the input files of the examplar from the https://osf.io/7c62s/.
 
-Then, run "Parcellation_main.m" or "Parcellation_main_T.m" in the ./code dir, and obtain the results in ./sample/Results/AGP/  dir.
+Then, enter ./code dir and run "Parcellation_main.m" or "Parcellation_main_T.m" in the ./code dir, and obtain the results in ./sample/Results/AGP/ dir.
+
+The "Parcellation_main_T.m" is for preprocessed fMRI images in fsLR_32K surface space. The computational time decreased with the number of parcels and increased with the length of time course. About 5 minutes for the whole cerebral cortex (200 parcels) and 1200 time points, and about 2 minutes for the whole cerebral cortex (400 parcels) and 200 time points. 
+
+The "Parcellation_main.m" is for functional connectivity files of preprocessed fMRI images in fsLR_32K surface space, About 2 minutes for the whole cerebral cortex (200 parcels) and 1200 time points. 
 
 
 ## Data
