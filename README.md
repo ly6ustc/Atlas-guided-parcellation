@@ -14,6 +14,8 @@ In ./code dir, includes the AGP codes and its dependency package.
 In ./sample dir, provide a examplar of HCP including the rs-fMRI images(functional connectivity) and parcellation results.
 
 # How to run
+All codes have been tested in Matlab 2017b.
+
 Download the entire "Atlas-guided-parcellation" directory into your PC, and download the input files of the examplar from the https://osf.io/7c62s/.
 
 Then, enter ./code dir and run "Parcellation_main.m" or "Parcellation_main_T.m" in the ./code dir, and obtain the results in ./sample/Results/AGP/ dir.
@@ -47,43 +49,35 @@ In current defalt setting:
 ![image](https://user-images.githubusercontent.com/69618541/192278311-48cf0479-f2dd-4d73-b50a-f92da5b86308.png)
 
 ## Parameters
-In "Parcellation_main.m" or "Parcellation_main_T.m"
+In "Parcellation_main_T.m" or "Parcellation_main.m"
 
 ![image](https://user-images.githubusercontent.com/69618541/192279296-90281d32-ded7-42f9-bcc3-9b4da5b0c2b6.png)
 
-Set the results dir.
+Set the output directory of results.
+
 
 ![image](https://user-images.githubusercontent.com/69618541/192279064-53855ea1-2489-440f-a4fd-2338bbd5db6b.png)
 
-"atlas_path" is the dir where includes the prior atlases;
+"atlas_path" is the directory where includes the prior atlases;
 
 Atlats = {'Shen.32k.dlabel.nii','Gordon333.32k_fs_LR.dlabel.nii'}  includes the full names of prior atlases files you want to use;
 
-Atlatsout={'Shen200','Gordon333'}  includes the corresponding the output dir names. For instance, if you use the "Shen.32k.dlabel.nii", the results will generated in '../sample/Results/AGP/sub-xxx/Shen200/'
+Atlatsout={'Shen200','Gordon333'}  includes the corresponding the output sub-directory names. For instance, if you use the "Shen.32k.dlabel.nii", the results will generated in '../sample/Results/AGP/sub-xxx/Shen200/'
 
-See comments in the codes, the parameters "n_voxels", "n_input", "n_features" should be consistent with your Data.<BR/>
-Network architecture: n_input>256>128>64>n_features<BR/>
-You can revise epoch number and convergence condition according to your dataset.
 ## Results
-* ./DECBP/Reluxxcluster/dae_middletrain.npy  the features in the embedded space
-* ./DECBP/Reluxxcluster/LabelFCP_train.npy the parcellation results for train dataset
-* ./DECBP/Reluxxcluster/GroupLabelFCP_train.npy the group parcellation results for train dataset
-* ./DECBP/Reluxxcluster/GroupLabelFCP_train.nii the group parcellation visualized results for train dataset<BR/>
-These results all contain three parts, pretrain results(just autoencoders and parcellated initialization), minimum trainloss results, and final stable results(little label changed)
+"./sample/Results/AGP/sub-xxx/atlas-xxx/FC_REST1.dlabel.nii"
 
+You can revised the ouput file name in "Parcellation_main_T.m" or "Parcellation_main.m", follow as:
 
-* ./DECBP/Reluxxcluster/ProResultsclusterxx/parcels.nii  the group parcellation visualized results for test dataset
-* ./DECBP/Reluxxcluster/ProResultsclusterxx/parcelspro.nii  the group parcellation visualized probability results for test dataset
+![image](https://user-images.githubusercontent.com/69618541/192281955-32a8d586-10b9-4606-89c8-bf09ec167842.png)
 
 
 # Package dependency
-* scikit-lean==0.23.1
-* scipy==1.6.2
-* nibabel==3.1.1
-* numpy==1.20.2
-* pytorch==1.6.0
-* torchvision==0.7.0
+* cifti-matlab-master
+* gifti-master
+* npy-matlab-master/npy-matlab-master
 
+These Matlab packages have been provided in ./code dir, as well as installed (add to path). 
 
 # Reference
-* Li Y, Liu A, Mi T, et al. Striatal Subdivisions Estimated via Deep Embedded Clustering With Application to Parkinson's Disease[J]. IEEE journal of biomedical and health informatics, 2021, 25(9): 3564-3575.
+* Li, Yu, et al. "Atlas-guided parcellation: Individualized functionally-homogenous parcellation in cerebral cortex." Computers in Biology and Medicine (2022): 106078.
