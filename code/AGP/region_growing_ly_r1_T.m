@@ -165,16 +165,6 @@ end
 
 fprintf('\nComplete!...\n');
 
-% toc;
-% labelf=zeros(length(medialwall),1);
-% labelf(~logical(medialwall))=labels;
-% 
-% cif=ciftiopen('/home/z/DataStorage/lyPython/PDAtlas/gradient2/Gradient_Individual/PPMI/Parcellation/Parcels_Merge/EtaPD_Z_gradient_mean0.1_mergeKNN.dlabel.nii');
-% cif.cdata(1:length(labelf))=labelf;
-% ciftisave(cif,'test_com.dlabel.nii');
-% 
-% 
-% save(gifti(labelf),'test_com.func.gii');
 
 end
 
