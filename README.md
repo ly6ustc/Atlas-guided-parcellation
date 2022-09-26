@@ -15,7 +15,9 @@ In ./sample dir, provide a examplar of HCP including the rs-fMRI images(function
 
 # How to run
 Download the entire "Atlas-guided-parcellation" directory into your PC, and download the input files of the examplar from the https://osf.io/7c62s/.
-python DECBP.py
+
+Then, run "Parcellation_main.m" or "Parcellation_main_T.m" in the ./code dir, and obtain the results in ./sample/Results/AGP/  dir.
+
 
 ## Data
 A numpy file with 3 dimenssion, subject × voxle × feature. The feature should be connectivity profiles, etc. For instance, the sample files in Tag DECBP:
