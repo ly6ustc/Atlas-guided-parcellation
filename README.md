@@ -14,6 +14,7 @@ In ./code dir, includes the AGP codes and its dependency package.
 In ./sample dir, provide a examplar of HCP including the rs-fMRI images(functional connectivity) and parcellation results.
 
 # How to run
+Download the entire "Atlas-guided-parcellation" directory into your PC, and download the input files of the examplar from the https://osf.io/7c62s/.
 python DECBP.py
 
 ## Data
