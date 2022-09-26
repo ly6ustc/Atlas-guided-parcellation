@@ -37,7 +37,7 @@ Atlats = {'Shen.32k.dlabel.nii','Gordon333.32k_fs_LR.dlabel.nii'};
 
 Atlatsout={'Shen200','Gordon333'};
 
-
+ThresholdofHom=[];
 
 
 
@@ -101,8 +101,8 @@ for i =1:length(list)
 
         tic;
 
-        [labels_l,~]=region_growing_ly_r1_T(ind_parcel_l, similarity_l,neibors,medialwall_l==0,[],leftnum);
-        [labels_r,~]=region_growing_ly_r1_T(ind_parcel_r, similarity_r, neibors,medialwall_r==0,[],rightnum);
+        [labels_l,~]=region_growing_ly_r1_T(ind_parcel_l, similarity_l,neibors,medialwall_l==0,ThresholdofHom,leftnum);
+        [labels_r,~]=region_growing_ly_r1_T(ind_parcel_r, similarity_r, neibors,medialwall_r==0,ThresholdofHom,rightnum);
         
         toc;
 
