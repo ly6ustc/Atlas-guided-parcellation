@@ -50,18 +50,18 @@ In the current default setting:
 ## Parameters
 In "Parcellation_main_T.m" or "Parcellation_main.m":
 
-* ![image](https://user-images.githubusercontent.com/69618541/192279296-90281d32-ded7-42f9-bcc3-9b4da5b0c2b6.png)
+![image](https://user-images.githubusercontent.com/69618541/192279296-90281d32-ded7-42f9-bcc3-9b4da5b0c2b6.png)
 
-set the output directory of results.
+* set the output directory of results.
 
-* ![image](https://user-images.githubusercontent.com/69618541/192284292-9fa1b527-1951-4f2b-81f6-6f4f5fef43d3.png)
+![image](https://user-images.githubusercontent.com/69618541/192284292-9fa1b527-1951-4f2b-81f6-6f4f5fef43d3.png)
 
-"atlas_path" is the directory that includes the prior atlases;
-Atlats = {'Shen.32k.dlabel.nii','Gordon333.32k_fs_LR.dlabel.nii'}  includes the full names of prior atlases files you want to use;
+* "atlas_path" is the directory that includes the prior atlases;
+  Atlats = {'Shen.32k.dlabel.nii','Gordon333.32k_fs_LR.dlabel.nii'}  includes the full names of prior atlases files you want to use;
 
-Atlatsout={'Shen200','Gordon333'}  includes the corresponding the output sub-directory names. For instance, if you use the "Shen.32k.dlabel.nii", the results will generated in '../sample/Results/AGP/sub-xxx/Shen200/'.
+* Atlatsout={'Shen200','Gordon333'}  includes the corresponding the output sub-directory names. For instance, if you use the "Shen.32k.dlabel.nii", the results will     generated in '../sample/Results/AGP/sub-xxx/Shen200/'.
 
-"ThresholdofHom" is the threshold of homogeneity, when the unassigned vertex's mean functional connectivity with its neighbor parcel is less than "ThresholdofHom", this vertex won't be labeled. "[]" represents don't set this threshold, which is the same as "ThresholdofHom=-1".
+* "ThresholdofHom" is the threshold of homogeneity, when the unassigned vertex's mean functional connectivity with its neighbor parcel is less than "ThresholdofHom",   this vertex won't be labeled. "[]" represents don't set this threshold, which is the same as "ThresholdofHom=-1".
 
 
 
