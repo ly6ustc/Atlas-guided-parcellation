@@ -47,6 +47,20 @@ In current defalt setting:
 ![image](https://user-images.githubusercontent.com/69618541/192278311-48cf0479-f2dd-4d73-b50a-f92da5b86308.png)
 
 ## Parameters
+In "Parcellation_main.m" or "Parcellation_main_T.m"
+
+![image](https://user-images.githubusercontent.com/69618541/192279296-90281d32-ded7-42f9-bcc3-9b4da5b0c2b6.png)
+
+Set the results dir.
+
+![image](https://user-images.githubusercontent.com/69618541/192279064-53855ea1-2489-440f-a4fd-2338bbd5db6b.png)
+
+"atlas_path" is the dir where includes the prior atlases;
+
+Atlats = {'Shen.32k.dlabel.nii','Gordon333.32k_fs_LR.dlabel.nii'}  includes the full names of prior atlases files you want to use;
+
+Atlatsout={'Shen200','Gordon333'}  includes the corresponding the output dir names. For instance, if you use the "Shen.32k.dlabel.nii", the results will generated in '../sample/Results/AGP/sub-xxx/Shen200/'
+
 See comments in the codes, the parameters "n_voxels", "n_input", "n_features" should be consistent with your Data.<BR/>
 Network architecture: n_input>256>128>64>n_features<BR/>
 You can revise epoch number and convergence condition according to your dataset.
